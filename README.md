@@ -2,14 +2,17 @@
 all steps from 0 knowledge to 100% installed wireguard vpn, running, affordable, ...
 
 
-
+#
 ## REQUIREMENTS: 
 1 PC or 1 laptop, running either 
 * Linux, or 
 * Windows, or 
 * MacOS (or derivative) ...
 1 VPS (eg. flokinet.is or 1984.is or netcup.de, 's most basic and affordable VPS offer)
+
 optional : your 100 most impatient friends with their mobile phones devices, in suspense watching you.
+#
+
 
 ### for Windows users
 
