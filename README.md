@@ -3,7 +3,11 @@ all steps from 0 knowledge to 100% installed wireguard vpn, running, affordable,
 
 
 
-## REQUIREMENTS: A, PC or laptop, running either Linux, or Windows, or MacOS (or derivative) ...
+## REQUIREMENTS: 
+1 PC or 1 laptop, running either 
+* Linux, or 
+* Windows, or 
+* MacOS (or derivative) ...
 
 
 ### for Windows users
