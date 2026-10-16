@@ -113,7 +113,7 @@ finally {
 }
 
 ```
-
+#
 
 ### for macOS users
 
@@ -200,7 +200,7 @@ printf 'Private key: %s\nPublic key:  %s\n' \
   "$key_dir/thislaptop-pq.pub"
 
 ```
-
+#
 
 ### for Linux users (here Debian-based)
 ```
@@ -281,4 +281,6 @@ printf 'Private key: %s\nPublic key:  %s\n' \
   "$key_dir/thislaptop-pq-key.txt" \
   "$key_dir/thislaptop-pq.pub"
 ```
+#
+
 
