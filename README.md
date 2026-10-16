@@ -32,13 +32,13 @@ https://github.com/CULTofBEETROOT/monVPNperso/local4windows_inst_age.ps1
 try to run this file :
 ```
 cd "$HOME\Desktop"
-.\install-age.ps1
+.\local4windows_inst_age.ps1
 ```
 IF!!! Windows blocks running scripts, allow it for this PowerShell window only, then run the script:
 ```
 cd "$HOME\Desktop"
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
-.\install-age.ps1
+.\local4windows_inst_age.ps1
 ```
 
 #
