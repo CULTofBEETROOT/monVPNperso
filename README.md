@@ -72,7 +72,7 @@ Open Terminal and download from root or sudoer with :
 sudo mkdir -p /root/scripts/
 sudo wget  -P /root/scripts/ "https://github.com/CULTofBEETROOT/monVPNperso/local4linux_inst_age.sh"
 chmod -x /root/scripts/local4linux_inst_age.sh
-bash  /root/scripts/local4linux_inst_age.sh
+sudo bash  /root/scripts/local4linux_inst_age.sh
 ```
 #
 
