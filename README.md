@@ -125,12 +125,12 @@ scp -i "$HOME"/.ssh/vps4wireguard-*[!.pub] \
 scp -i /root/.ssh/vps4wireguard*[!.pub] -P 22 /root/scripts/install_vpn_ON_vps.sh root@vpsIP:/root/
 ```
 
-## NOW for EveryOne: log-into the VPS whatever way is yours:
-if you have been able to preset your ssh public key, you probably know how to log in
-if you have not been able to preset your ssh public key, you certainly have to login with your preset (or emailed) root password
+## NOW for EveryOne: log-into the VPS 
+whatever way is yours:
+* if you have been able to preset your ssh public key, you probably know how to log in
+* if you have not been able to preset your ssh public key, you certainly have to login with your preset (or emailed) root password
 
 and run the script we just copied-in on the previous step:
-
 1) You will be prompted for the letter y on loosing (you won't) your ssh connection
 2) on the public IP address of your VPS (from your emails)
 3) on a non-root new user passphrase of your choice (to remember because next time you log-in, you'll be loging in non-root mode)
@@ -140,3 +140,27 @@ and run the script we just copied-in on the previous step:
 ```
 exit 
 exit
+```
+
+### for Windows users, copy-paste into your Powershell terminal: 
+```
+$key = Get-ChildItem "$HOME\.ssh\vps4wireguard-*" -File |
+    Where-Object { $_.Name -notlike "*.pub" } |
+    Sort-Object LastWriteTime -Descending |
+    Select-Object -First 1 -ExpandProperty FullName
+
+scp -i $key -P 61525 "vpnadmin@vpsIP:/home/vpnadmin/*.age" "$HOME\Desktop\" 
+
+```
+
+### for macOs users, copy-paste into your terminal:
+```
+scp -i "$HOME"/.ssh/vps4wireguard-*[!.pub] \
+  -P 61525  vpnadmin@vpsIP:/home/vpnadmin/*.age \
+  "$HOME/Desktop/" 
+```
+
+### for Linux users, copy paste into your terminal:
+```
+scp -i /root/.ssh/vps4wireguard*[!.pub] -P 61525 vpnadmin@vpsIP:/home/vpnadmin/*.age /home/$USER/Downloads/ 
+```
