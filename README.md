@@ -66,14 +66,21 @@ chmod +x local4macOs_inst_age.sh
 #
 
 ### for Linux users (here Debian-based)
-
 Open Terminal and download from root or sudoer with :
 ```
 sudo mkdir -p /root/scripts/
 sudo wget  -P /root/scripts/ "https://github.com/CULTofBEETROOT/monVPNperso/local4linux_inst_age.sh"
 chmod -x /root/scripts/local4linux_inst_age.sh
 sudo bash  /root/scripts/local4linux_inst_age.sh
+sudo wget -P /root/scripts/ "https://github.com/CULTofBEETROOT/monVPNperso/local4ssh_linux.sh"
+chmod -x /root/scripts/local4ssh_linux.sh
+sudo bash /root/scripts/local4ssh_linux.sh
 ```
 #
+
+
+
+# THEN INSTALL Debian TRIXIE ON YOUR VPS from the VPS controle pannel, and when allowed, pre-install your SSH public key via the (Web)Controle Pannel. 
+(read your email from the provider or log into your online account)
 
 
