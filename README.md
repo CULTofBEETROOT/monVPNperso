@@ -134,7 +134,9 @@ and run the script we just copied-in on the previous step:
 1) You will be prompted for the letter y on loosing (you won't) your ssh connection
 2) on the public IP address of your VPS (from your emails)
 3) on a non-root new user passphrase of your choice (to remember because next time you log-in, you'll be loging in non-root mode)
-4) when two lines have enabled, count 5 seconds and press Ctrl+C, (that's normal and is due to the network), at what stage you can quit the ssh connection with :
+4) when two lines have enabled and you face a freez, count 5 seconds and press Ctrl+C,
+   (that's normal and is due to the network), 
+5) at what stage you can quit the ssh connection with :
 ```
 exit 
 exit
