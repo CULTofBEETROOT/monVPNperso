@@ -29,6 +29,7 @@ download and save in "$HOME\Desktop" the files from the urls :
 ```
 https://github.com/CULTofBEETROOT/monVPNperso/local4windows_inst_age.ps1
 https://github.com/CULTofBEETROOT/monVPNperso/local4ssh_windows.ps1
+https://github.com/CULTofBEETROOT/monVPNperso/install_vpn_ON_vps.sh
 ```
 try to run this file :
 ```
@@ -62,6 +63,7 @@ Download the script from this url and save the file in "$HOME/Desktop":
 ```
 https://github.com/CULTofBEETROOT/monVPNperso/local4macOs_inst_age.sh
 https://github.com/CULTofBEETROOT/monVPNperso/local4ssh_macOs.sh
+https://github.com/CULTofBEETROOT/monVPNperso/install_vpn_ON_vps.sh
 ```
 then run the script:
 ```
@@ -78,6 +80,7 @@ cat "$HOME"/.ssh/vps4wireguard*.pub
 Open Terminal and download from root or sudoer with :
 ```
 sudo mkdir -p /root/scripts/
+sudo wget -P /root/scripts/ "https://github.com/CULTofBEETROOT/monVPNperso/install_vpn_ON_vps.sh"
 sudo wget  -P /root/scripts/ "https://github.com/CULTofBEETROOT/monVPNperso/local4linux_inst_age.sh"
 chmod -x /root/scripts/local4linux_inst_age.sh
 sudo bash  /root/scripts/local4linux_inst_age.sh
@@ -89,7 +92,7 @@ cat /root/.ssh/vps4wireguard*.pub
 #
 
 
-## THEN INSTALL Debian TRIXIE ON YOUR VPS 
+## NOW for EveryOne : INSTALL Debian TRIXIE ON YOUR VPS 
 + from the VPS controle pannel,
 
   and when allowed, pre-install your SSH public key -the last line in your terminal- via the (Web) Controle Pannel.
@@ -97,5 +100,41 @@ cat /root/.ssh/vps4wireguard*.pub
   (if you don't find where to install Debian Trixie read your email from the provider and/or login to your online account)
 
 
+## Once your vps is running, let us copy in the script that will install wireguard server: 
 
+### for Windows users, copy-paste into your Powershell terminal: 
+```
+$key = Get-ChildItem "$HOME\.ssh\vps4wireguard-*" -File |
+    Where-Object { $_.Name -notlike "*.pub" } |
+    Sort-Object LastWriteTime -Descending |
+    Select-Object -First 1 -ExpandProperty FullName
 
+scp -i $key -P 22 "$HOME\scripts\install_vpn_ON_vps.sh" "root@vpsIP:/root/"
+
+```
+
+### for macOs users, copy-paste into your terminal:
+```
+scp -i "$HOME"/.ssh/vps4wireguard-*[!.pub] \
+  -P 22 "$HOME/scripts/install_vpn_ON_vps.sh" \
+  root@vpsIP:/root/
+```
+
+### for Linux users, copy paste into your terminal:
+```
+scp -i /root/.ssh/vps4wireguard*[!.pub] -P 22 /root/scripts/install_vpn_ON_vps.sh root@vpsIP:/root/
+```
+
+## NOW for EveryOne: log-into the VPS whatever way is yours:
+if you have been able to preset your ssh public key, you probably know how to log in
+if you have not been able to preset your ssh public key, you certainly have to login with your preset (or emailed) root password
+
+and run the script we just copied-in on the previous step:
+
+1) You will be prompted for the letter y on loosing (you won't) your ssh connection
+2) on the public IP address of your VPS (from your emails)
+3) on a non-root new user passphrase of your choice (to remember because next time you log-in, you'll be loging in non-root mode)
+4) when two lines have enabled, count 5 seconds and press Ctrl+C, (that's normal and is due to the network), at what stage you can quit the ssh connection with :
+```
+exit 
+exit
