@@ -56,12 +56,15 @@ Download the script from this url and save the file in "$HOME/Desktop":
 
 ```
 https://github.com/CULTofBEETROOT/monVPNperso/local4macOs_inst_age.sh
+https://github.com/CULTofBEETROOT/monVPNperso/local4ssh_macOs.sh
 ```
 then run the script:
 ```
 cd ~/Desktop
 chmod +x local4macOs_inst_age.sh
 ./local4macOs_inst_age.sh
+chmod -x local4ssh_macOs.sh
+./local4ssh_macOs.sh
 ```
 #
 
