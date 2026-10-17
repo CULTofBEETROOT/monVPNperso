@@ -82,8 +82,15 @@ sudo bash /root/scripts/local4ssh_linux.sh
 #
 
 
-
-# THEN INSTALL Debian TRIXIE ON YOUR VPS from the VPS controle pannel, and when allowed, pre-install your SSH public key via the (Web)Controle Pannel. 
+## THEN INSTALL Debian TRIXIE ON YOUR VPS 
+--> from the VPS controle pannel, 
+--> and when allowed, pre-install your SSH public key via the (Web) Controle Pannel.
 (read your email from the provider or log into your online account)
+
+linux users : 
+```
+cat /root/.ssh/vps4wireguard*.pub
+```
+
 
 
