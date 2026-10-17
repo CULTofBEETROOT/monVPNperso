@@ -25,7 +25,7 @@ Close and reopen the terminal, then check that it runs:
 age --versionage-keygen --help
 ```
 
-download and save in "$HOME\Desktop" the files from the url :
+download and save in "$HOME\Desktop" the files from the urls :
 ```
 https://github.com/CULTofBEETROOT/monVPNperso/local4windows_inst_age.ps1
 https://github.com/CULTofBEETROOT/monVPNperso/local4ssh_windows.ps1
@@ -91,7 +91,9 @@ cat /root/.ssh/vps4wireguard*.pub
 
 ## THEN INSTALL Debian TRIXIE ON YOUR VPS 
 + from the VPS controle pannel,
+
   and when allowed, pre-install your SSH public key -the last line in your terminal- via the (Web) Controle Pannel.
+
   (if you don't find where to install Debian Trixie read your email from the provider and/or login to your online account)
 
 
