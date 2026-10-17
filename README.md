@@ -25,20 +25,25 @@ Close and reopen the terminal, then check that it runs:
 age --versionage-keygen --help
 ```
 
-download and save in "$HOME\Desktop" the file from the url :
+download and save in "$HOME\Desktop" the files from the url :
 ```
 https://github.com/CULTofBEETROOT/monVPNperso/local4windows_inst_age.ps1
+https://github.com/CULTofBEETROOT/monVPNperso/local4ssh_windows.ps1
 ```
 try to run this file :
 ```
 cd "$HOME\Desktop"
 .\local4windows_inst_age.ps1
+.\local4ssh_windows.ps1
+Get-Content "$HOME\.ssh\vps4wireguard*.pub"
 ```
 IF!!! Windows blocks running scripts, allow it for this PowerShell window only, then run the script:
 ```
 cd "$HOME\Desktop"
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 .\local4windows_inst_age.ps1
+.\local4ssh_windows.ps1
+Get-Content "$HOME\.ssh\vps4wireguard*.pub"
 ```
 #
 
@@ -65,6 +70,7 @@ chmod +x local4macOs_inst_age.sh
 ./local4macOs_inst_age.sh
 chmod -x local4ssh_macOs.sh
 ./local4ssh_macOs.sh
+cat "$HOME"/.ssh/vps4wireguard*.pub
 ```
 #
 
@@ -78,19 +84,16 @@ sudo bash  /root/scripts/local4linux_inst_age.sh
 sudo wget -P /root/scripts/ "https://github.com/CULTofBEETROOT/monVPNperso/local4ssh_linux.sh"
 chmod -x /root/scripts/local4ssh_linux.sh
 sudo bash /root/scripts/local4ssh_linux.sh
+cat /root/.ssh/vps4wireguard*.pub
 ```
 #
 
 
 ## THEN INSTALL Debian TRIXIE ON YOUR VPS 
---> from the VPS controle pannel, 
---> and when allowed, pre-install your SSH public key via the (Web) Controle Pannel.
-(read your email from the provider or log into your online account)
++ from the VPS controle pannel,
+  and when allowed, pre-install your SSH public key -the last line in your terminal- via the (Web) Controle Pannel.
+  (if you don't find where to install Debian Trixie read your email from the provider and/or login to your online account)
 
-linux users : 
-```
-cat /root/.ssh/vps4wireguard*.pub
-```
 
 
 
