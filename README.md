@@ -175,5 +175,6 @@ mkdir -p /home/$USER/WGclients
 scp -i /root/.ssh/vps4wireguard*[!.pub] -P 61525 vpnadmin@vpsIP:/home/vpnadmin/*.age /home/$USER/Downloads/WGclients/ 
 bash /root/scripts/local4linux_age-decyptWGclients.sh
 ```
-#### open the any client???.png file and scan the QR code from your mobile's wireguard's app (we recommend the google play's WireguardProject app) QR scanner.
+#### open any /home/$USER/WGclients/clientXXX.png file, scan the QR code from your mobile's wireguard's app QR scanner. 
+(we recommend the google play's WireguardProject app).
 CONGRATULITION!
