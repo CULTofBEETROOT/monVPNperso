@@ -14,7 +14,7 @@ optional : your 100 most impatient friends with their mobile phones devices, in 
 #
 
 
-### for Windows users
+### Windows users
 
 Open PowerShell or Windows Terminal and install with WinGet:
 ```
@@ -48,7 +48,7 @@ Get-Content "$HOME\.ssh\vps4wireguard*.pub"
 ```
 #
 
-### for macOS users
+### macOS users
 
 Open Terminal and install with Homebrew:
 ```
@@ -76,7 +76,7 @@ cat "$HOME"/.ssh/vps4wireguard*.pub
 ```
 #
 
-### for Linux users (here Debian-based)
+### Linux users (here Debian-based)
 Open Terminal and download from root or sudoer with :
 ```
 sudo mkdir -p /root/scripts/
@@ -111,7 +111,7 @@ BE AWARE: this entire page is being edited and the last bit still missing is :
 
 ## Once your vps is running, let us copy in the script that will install wireguard server: 
 
-### for Windows users, copy-paste into your Powershell terminal: 
+### Windows users, copy-paste into your Powershell terminal: 
 ```
 $key = Get-ChildItem "$HOME\.ssh\vps4wireguard-*" -File |
     Where-Object { $_.Name -notlike "*.pub" } |
@@ -122,14 +122,14 @@ scp -i $key -P 22 "$HOME\scripts\install_vpn_ON_vps.sh" "root@vpsIP:/root/"
 
 ```
 
-### for macOs users, copy-paste into your terminal:
+### macOs users, copy-paste into your terminal:
 ```
 scp -i "$HOME"/.ssh/vps4wireguard-*[!.pub] \
   -P 22 "$HOME/scripts/install_vpn_ON_vps.sh" \
   root@vpsIP:/root/
 ```
 
-### for Linux users, copy paste into your terminal:
+### Linux users, copy paste into your terminal:
 ```
 scp -i /root/.ssh/vps4wireguard*[!.pub] -P 22 /root/scripts/install_vpn_ON_vps.sh root@vpsIP:/root/
 ```
@@ -151,7 +151,7 @@ exit
 exit
 ```
 
-### for Windows users, copy-paste into your Powershell terminal: 
+### Windows users, copy-paste into your Powershell terminal: 
 ```
 $key = Get-ChildItem "$HOME\.ssh\vps4wireguard-*" -File |
     Where-Object { $_.Name -notlike "*.pub" } |
@@ -162,14 +162,14 @@ scp -i $key -P 61525 "vpnadmin@vpsIP:/home/vpnadmin/*.age" "$HOME\Desktop\"
 
 ```
 
-### for macOs users, copy-paste into your terminal:
+### macOs users, copy-paste into your terminal:
 ```
 scp -i "$HOME"/.ssh/vps4wireguard-*[!.pub] \
   -P 61525  vpnadmin@vpsIP:/home/vpnadmin/*.age \
   "$HOME/Desktop/" 
 ```
 
-### for Linux users, copy paste into your terminal:
+### Linux users, copy paste into your terminal:
 ```
 mkdir -p /home/$USER/WGclients
 scp -i /root/.ssh/vps4wireguard*[!.pub] -P 61525 vpnadmin@vpsIP:/home/vpnadmin/*.age /home/$USER/Downloads/WGclients/ 
