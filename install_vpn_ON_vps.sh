@@ -342,13 +342,13 @@ rm -rf "$install_dir"
 key_dir="$HOME/.ssh"
 mkdir -p "$key_dir"
 
-age-keygen -pq -o "$key_dir/is33-pq-key.txt" 2>/dev/null
-age-keygen -y "$key_dir/is33-pq-key.txt" > "$key_dir/is33-pq.pub"
-chmod 600 "$key_dir/is33-pq-key.txt"
+age-keygen -pq -o "$key_dir/thisServer-pq-key.txt" 2>/dev/null
+age-keygen -y "$key_dir/thisServer-pq-key.txt" > "$key_dir/thisServer-pq.pub"
+chmod 600 "$key_dir/thisServer-pq-key.txt"
 
 printf 'Private key: %s\nPublic key:  %s\n' \
-  "$key_dir/is33-pq-key.txt" \
-  "$key_dir/is33-pq.pub"
+  "$key_dir/thisServer-pq-key.txt" \
+  "$key_dir/thisServer-pq.pub"
 
 dfkljdbnmgcmdg58esnfjvhdsbestjr
 
