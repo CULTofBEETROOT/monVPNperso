@@ -16,7 +16,7 @@ endletsapt
 
  apt update 
  apt install -y sudo;
- apt install -y tor apt-transport-tor torsocks 
+ apt install -y tor apt-transport-tor torsocks;
  systemctl enable --now tor.service
  echo 'unattended-upgrades unattended-upgrades/enable_auto_updates boolean true' \  | sudo debconf-set-selections
  sudo DEBIAN_FRONTEND=noninteractive apt-get install -y unattended-upgrades
