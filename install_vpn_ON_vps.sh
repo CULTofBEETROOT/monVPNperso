@@ -16,8 +16,10 @@ endletsapt
 
  apt update 
  apt install -y sudo;
- apt install -y tor apt-transport-tor
+ apt install -y tor apt-transport-tor torsocks 
  systemctl enable --now tor.service
+ echo 'unattended-upgrades unattended-upgrades/enable_auto_updates boolean true' \  | sudo debconf-set-selections
+ sudo DEBIAN_FRONTEND=noninteractive apt-get install -y unattended-upgrades
 
 echo "transport-tor downloaded"
 echo "TorNodes {ch}" > /etc/tor/torrc
@@ -50,6 +52,9 @@ endupdateapt
 
 rm -f /etc/apt/*.list
 rm -f /etc/apt/*.list~
+echo "APT::Periodic::Update-Package-Lists "1";" > cat /etc/apt/apt.conf.d/20auto-upgrades
+echo "APT::Periodic::Update-Package-Lists "1";" >> cat /etc/apt/apt.conf.d/20auto-upgrades
+echo "" > /etc/apt/apt.conf.d/50unattended-upgrades
 apt update
 apt upgrade -y
 apt autoremove -y ufw
