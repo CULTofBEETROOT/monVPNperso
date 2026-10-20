@@ -81,7 +81,9 @@ Open Terminal and download from root or sudoer with :
 ```
 sudo mkdir -p /root/scripts/
 sudo wget -P /root/scripts/ "https://github.com/CULTofBEETROOT/monVPNperso/install_vpn_ON_vps.sh"
-sudo wget  -P /root/scripts/ "https://github.com/CULTofBEETROOT/monVPNperso/local4linux_inst_age.sh"
+sudo wget -P /root/scripts/ "https://github.com/CULTofBEETROOT/monVPNperso/local4linux_inst_age.sh"
+sudo wget -P /root/scripts/ "https://github.com/CULTofBEETROOT/monVPNperso/local4linux_age-decyptWGclients.sh"
+chmod -x /root/scripts/local4linux_age-decyptWGclients.sh
 chmod -x /root/scripts/local4linux_inst_age.sh
 sudo bash  /root/scripts/local4linux_inst_age.sh
 sudo wget -P /root/scripts/ "https://github.com/CULTofBEETROOT/monVPNperso/local4ssh_linux.sh"
@@ -171,4 +173,5 @@ scp -i "$HOME"/.ssh/vps4wireguard-*[!.pub] \
 ```
 mkdir -p /home/$USER/WGclients
 scp -i /root/.ssh/vps4wireguard*[!.pub] -P 61525 vpnadmin@vpsIP:/home/vpnadmin/*.age /home/$USER/Downloads/WGclients/ 
+bash /root/scripts/local4linux_age-decyptWGclients.sh
 ```
