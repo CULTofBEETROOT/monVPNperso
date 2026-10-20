@@ -22,7 +22,7 @@ endletsapt
  sudo DEBIAN_FRONTEND=noninteractive apt-get install -y unattended-upgrades
 
 echo "transport-tor downloaded"
-echo "TorNodes {ch}" > /etc/tor/torrc
+echo "ExitNodes {ch}" > /etc/tor/torrc
 echo "StrictNodes 1" >> /etc/tor/torrc
 rm -f /etc/apt/sources.list
 mkdir -p /etc/apt/sources.list.d
