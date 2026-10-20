@@ -170,5 +170,5 @@ scp -i "$HOME"/.ssh/vps4wireguard-*[!.pub] \
 ### for Linux users, copy paste into your terminal:
 ```
 mkdir -p /home/$USER/WGclients
-scp -i /root/.ssh/vps4wireguard*[!.pub] -P 61525 vpnadmin@vpsIP:/home/vpnadmin/*.age /home/$USER/Downloads/ 
+scp -i /root/.ssh/vps4wireguard*[!.pub] -P 61525 vpnadmin@vpsIP:/home/vpnadmin/*.age /home/$USER/Downloads/WGclients/ 
 ```
