@@ -54,7 +54,17 @@ rm -f /etc/apt/*.list
 rm -f /etc/apt/*.list~
 echo "APT::Periodic::Update-Package-Lists "1";" > cat /etc/apt/apt.conf.d/20auto-upgrades
 echo "APT::Periodic::Update-Package-Lists "1";" >> cat /etc/apt/apt.conf.d/20auto-upgrades
-echo "" > /etc/apt/apt.conf.d/50unattended-upgrades
+cat>/etc/apt/apt.conf.d/50unattended-upgrades<<'end50unattended'
+Unattended-Upgrade::Origins-Pattern {
+        "origin=Debian,codename=${distro_codename},label=Debian";
+        "origin=Debian,codename=${distro_codename},label=Debian-Security";
+        "origin=Debian,codename=${distro_codename}-security,label=Debian-Security";
+};
+Unattended-Upgrade::Package-Blacklist {
+};
+Unattended-Upgrade::Automatic-Reboot "true";
+end50unattended
+
 apt update
 apt upgrade -y
 apt autoremove -y ufw
