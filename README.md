@@ -192,4 +192,4 @@ bash /root/scripts/local4linux_age-decyptWGclients.sh
 
 * (no longer on F-droid because wireguard updates themselves from within their VPN tunnel and F-droid can't verify updates).
 
-CONGRATULITION! Your Mobile Phone's browsing and Data now streems from your VPS location.
+## CONGRATULITION! Your Mobile Phone's browsing and Data now streems from your VPS location.
