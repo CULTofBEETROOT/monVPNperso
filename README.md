@@ -5,8 +5,8 @@ all steps from 0 knowledge to 100% installed wireguard vpn, running, affordable,
 #
 <table>
   <tr>
-    <td><img src="images/wireguard_Play.jpg" alt="Photo 1" width="600"></td>
-    <td><img src="images/wireguard_App_Store.jpg" alt="Photo 2" width="600"></td>
+    <td><img src="images/wireguard_Play.jpg" alt="WIREGUARD Project App on Play store" width="650"></td>
+    <td><img src="images/wireguard_App_Store.jpg" alt="WIREGUARD Project App on App Store" width="650"></td>
   </tr>
 </table>
 
