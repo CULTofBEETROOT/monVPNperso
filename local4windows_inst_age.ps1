@@ -75,10 +75,9 @@ try {
     & (Join-Path $binDir "age-keygen.exe") -y $privateKey | Set-Content -Encoding ascii $publicKey
 
     $key = [System.IO.File]::ReadAllText("$key_dir/thislaptop-pq.pub").TrimEnd("`r", "`n")
-    $scriptPath = "/somepath/install_vps.sh"
+    $scriptPath = "$HOME\Desktop\install_vpn_ON_vps.sh"
     $text = [System.IO.File]::ReadAllText($scriptPath)
-    [System.IO.File]::WriteAllText($scriptPath, $text.Replace("KeyPlaceHolderI", $key))
-
+    [System.IO.File]::WriteAllText($scriptPath, $text.Replace("METTEZ_VOTRE_CLEF_AGE_ICI", $key))
 
     Write-Host "Installed age in $binDir"
     Write-Host "Private key: $privateKey"
