@@ -26,7 +26,7 @@ optional : your 100 most impatient friends with their mobile phones devices, in 
 #
 
 
-# Windows users
+# Windows users - Self-Hosted VPN
 
 Open PowerShell or Windows Terminal and install with WinGet:
 ```
@@ -109,7 +109,7 @@ scp -i $key -P 61525 "vpnadmin@vpsIP:/home/vpnadmin/*.age" "$HOME\Desktop\"
 ```
 #
 
-# macOS users
+# macOS users - Self-Hosted VPN
 
 Open Terminal and install with Homebrew:
 ```
@@ -179,7 +179,7 @@ scp -i "$HOME"/.ssh/vps4wireguard-*[!.pub] \
 ```
 #
 
-# Linux users (here Debian-based)
+# Linux users (here Debian-based) - Self-Hosted VPN
 Open Terminal and download from root or sudoer with :
 ```
 sudo mkdir -p /root/scripts/
@@ -245,47 +245,13 @@ bash /root/scripts/local4linux_age-decyptWGclients.sh
 #
 
 
+
 BE AWARE: this entire page is being edited and the last bit still missing is :
 + add your VPS public IP in the script where there is a place holder awaiting (the ssh connection code for instance)
 + add your SSh .pub key (above) to the ssh placeholder on the head of install_vpn_ON_vps.sh
 + add your age .pub key (above) to the age public key place holder of install_vpn_ON_vps.sh
 + plan any passphase, soon will they be prompted.
 
-
-
-
-## NOW for EveryOne: log-into the VPS 
-whatever way is yours:
-* if you have been able to preset your ssh public key, you probably know how to log in
-* if you have not been able to preset your ssh public key, you certainly have to login with your preset (or emailed) root password
-
-and run the script we just copied-in on the previous step:
-1) You will be prompted for the letter y on loosing (you won't) your ssh connection
-2) on the public IP address of your VPS (from your emails)
-3) on a non-root new user passphrase of your choice (to remember because next time you log-in, you'll be loging in non-root mode)
-4) when two lines have enabled and you face a freez, count 5 seconds and press Ctrl+C,
-   (that's normal and is due to the network), 
-5) at what stage you can quit the ssh connection with :
-```
-exit 
-exit
-```
-
-### Linux users, copy paste into your terminal:
-```
-mkdir -p /home/$USER/WGclients
-scp -i /root/.ssh/vps4wireguard*[!.pub] -P 61525 vpnadmin@vpsIP:/home/vpnadmin/*.age /home/$USER/Downloads/WGclients/ 
-bash /root/scripts/local4linux_age-decyptWGclients.sh
-```
-#### open any /home/$USER/WGclients/clientXXX.png file, 
-#### scan the QR code from your mobile's wireguard's app QR scanner, 
-#### namely: 
-
-* (google) Play Store : https://play.google.com/store/apps/details?id=com.wireguard.android&hl=en-US
-
-* Apple Store : https://apps.apple.com/us/app/wireguard/id1441195209
-
-* (no longer on F-droid because wireguard updates themselves from within their VPN tunnel and F-droid can't verify updates).
 
 ## CONGRATULITION! 
 ### Your mobile Phone's browsing and Data now stream from your VPS location.
