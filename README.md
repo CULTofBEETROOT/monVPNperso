@@ -183,12 +183,13 @@ scp -i /root/.ssh/vps4wireguard*[!.pub] -P 61525 vpnadmin@vpsIP:/home/vpnadmin/*
 bash /root/scripts/local4linux_age-decyptWGclients.sh
 ```
 #### open any /home/$USER/WGclients/clientXXX.png file, 
-#### scan the QR code from your mobile's wireguard's app QR scanner, namely: 
+#### scan the QR code from your mobile's wireguard's app QR scanner, 
+##### namely: 
 
-(google) Play Store : https://play.google.com/store/apps/details?id=com.wireguard.android&hl=en-US
+* (google) Play Store : https://play.google.com/store/apps/details?id=com.wireguard.android&hl=en-US
 
-Apple Store : https://apps.apple.com/us/app/wireguard/id1441195209
+* Apple Store : https://apps.apple.com/us/app/wireguard/id1441195209
 
-(no longer on F-droid because wireguard updates themselves from within their VPN tunnel and F-droid can't verify updates).
+* (no longer on F-droid because wireguard updates themselves from within their VPN tunnel and F-droid can't verify updates).
 
 CONGRATULITION!
