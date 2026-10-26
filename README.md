@@ -1,6 +1,11 @@
 # monVPNperso
 all steps from 0 knowledge to 100% installed wireguard vpn, running, affordable, ...
 
+<table>
+  <tr>
+     <td><a href="LISEZ-MOI.md">🇫🇷</a></td>
+  </tr>
+</table>
 
 #
 <table>
@@ -9,8 +14,6 @@ all steps from 0 knowledge to 100% installed wireguard vpn, running, affordable,
     <td><img src="images/wireguard_App_Store.jpg" alt="WIREGUARD Project App on App Store" width="650"></td>
   </tr>
 </table>
-<a href="LISEZ-MOI.md">🇫🇷</a>
-
 
 ## REQUIREMENTS: 
 1 PC or 1 laptop, running either 
