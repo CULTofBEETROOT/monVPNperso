@@ -5,12 +5,10 @@ all steps from 0 knowledge to 100% installed wireguard vpn, running, affordable,
 #
 <table>
   <tr>
-    <td><img src="images/wireguard_Play.jpg" alt="Photo 1" width="200"></td>
-    <td><img src="wireguard_App_Store.jpg" alt="Photo 2" width="200"></td>
+    <td><img src="images/wireguard_Play.jpg" alt="Photo 1" width="600"></td>
+    <td><img src="images/wireguard_App_Store.jpg" alt="Photo 2" width="600"></td>
   </tr>
 </table>
-
-![Play store App image](images/wireguard_Play.jpg)
 
 ## REQUIREMENTS: 
 1 PC or 1 laptop, running either 
