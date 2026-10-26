@@ -23,7 +23,6 @@ all steps from 0 knowledge to 100% installed wireguard vpn, running, affordable,
 1 VPS (eg. flokinet.is or 1984.is or netcup.de, 's most basic and affordable VPS offer)
 
 optional : your 100 most impatient friends with their mobile phones devices, in suspense watching you.
-#
 
 #
 #
