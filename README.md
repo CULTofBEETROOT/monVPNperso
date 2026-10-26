@@ -1,7 +1,7 @@
 # monVPNperso
 all steps from 0 knowledge to 100% installed wireguard vpn, running, affordable, ...
 
-<table>
+<table border="0">
   <tr>
      <td><a href="LISEZ-MOI.md">🇫🇷</a></td>
   </tr>
