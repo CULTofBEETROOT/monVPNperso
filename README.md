@@ -58,6 +58,56 @@ Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 .\local4ssh_windows.ps1
 Get-Content "$HOME\.ssh\vps4wireguard*.pub"
 ```
+
+#### INSTALL Debian TRIXIE ON YOUR VPS 
++ from the VPS controle pannel,
+
+  and when allowed, pre-install your SSH public key -the last line in your terminal- via the (Web) Controle Pannel.
+
+  (if you don't find where to install Debian Trixie read your email from the provider and/or login to your online account)
+
+
+#### Once your vps is running, let us copy in the script that will install wireguard server: 
+
+#### copy-paste into your Powershell terminal: 
+```
+$key = Get-ChildItem "$HOME\.ssh\vps4wireguard-*" -File |
+    Where-Object { $_.Name -notlike "*.pub" } |
+    Sort-Object LastWriteTime -Descending |
+    Select-Object -First 1 -ExpandProperty FullName
+
+scp -i $key -P 22 "$HOME\scripts\install_vpn_ON_vps.sh" "root@vpsIP:/root/"
+
+```
+
+#### log-into the VPS 
+whatever way is yours:
+* if you have been able to preset your ssh public key, you probably know how to log in
+* if you have not been able to preset your ssh public key, you certainly have to login with your preset (or emailed) root password
+
+and run the script we just copied-in on the previous step:
+1) You will be prompted for the letter y on loosing (you won't) your ssh connection
+2) on the public IP address of your VPS (from your emails)
+3) on a non-root new user passphrase of your choice (to remember because next time you log-in, you'll be loging in non-root mode)
+4) when two lines have enabled and you face a freez, count 5 seconds and press Ctrl+C,
+   (that's normal and is due to the network), 
+5) at what stage you can quit the ssh connection with :
+```
+exit 
+exit
+```
+
+#### copy-paste into your Powershell terminal: 
+```
+$key = Get-ChildItem "$HOME\.ssh\vps4wireguard-*" -File |
+    Where-Object { $_.Name -notlike "*.pub" } |
+    Sort-Object LastWriteTime -Descending |
+    Select-Object -First 1 -ExpandProperty FullName
+
+scp -i $key -P 61525 "vpnadmin@vpsIP:/home/vpnadmin/*.age" "$HOME\Desktop\" 
+
+```
+
 #
 
 ### macOS users
@@ -86,6 +136,48 @@ chmod -x local4ssh_macOs.sh
 ./local4ssh_macOs.sh
 cat "$HOME"/.ssh/vps4wireguard*.pub
 ```
+
+
+#### INSTALL Debian TRIXIE ON YOUR VPS 
++ from the VPS controle pannel,
+
+  and when allowed, pre-install your SSH public key -the last line in your terminal- via the (Web) Controle Pannel.
+
+  (if you don't find where to install Debian Trixie read your email from the provider and/or login to your online account)
+
+
+#### Once your vps is running, let us copy in the script that will install wireguard server: 
+
+#### copy-paste into your terminal:
+```
+scp -i "$HOME"/.ssh/vps4wireguard-*[!.pub] \
+  -P 22 "$HOME/scripts/install_vpn_ON_vps.sh" \
+  root@vpsIP:/root/
+```
+
+#### log-into the VPS 
+whatever way is yours:
+* if you have been able to preset your ssh public key, you probably know how to log in
+* if you have not been able to preset your ssh public key, you certainly have to login with your preset (or emailed) root password
+
+and run the script we just copied-in on the previous step:
+1) You will be prompted for the letter y on loosing (you won't) your ssh connection
+2) on the public IP address of your VPS (from your emails)
+3) on a non-root new user passphrase of your choice (to remember because next time you log-in, you'll be loging in non-root mode)
+4) when two lines have enabled and you face a freez, count 5 seconds and press Ctrl+C,
+   (that's normal and is due to the network), 
+5) at what stage you can quit the ssh connection with :
+```
+exit 
+exit
+```
+
+##### copy-paste into your terminal:
+```
+scp -i "$HOME"/.ssh/vps4wireguard-*[!.pub] \
+  -P 61525  vpnadmin@vpsIP:/home/vpnadmin/*.age \
+  "$HOME/Desktop/" 
+```
 #
 
 ### Linux users (here Debian-based)
@@ -103,17 +195,8 @@ chmod -x /root/scripts/local4ssh_linux.sh
 sudo bash /root/scripts/local4ssh_linux.sh
 cat /root/.ssh/vps4wireguard*.pub
 ```
-#
 
-
-BE AWARE: this entire page is being edited and the last bit still missing is :
-+ add your VPS public IP in the script where there is a place holder awaiting (the ssh connection code for instance)
-+ add your SSh .pub key (above) to the ssh placeholder on the head of install_vpn_ON_vps.sh
-+ add your age .pub key (above) to the age public key place holder of install_vpn_ON_vps.sh
-+ plan any passphase, soon will they be prompted.
-
-
-## NOW for EveryOne : INSTALL Debian TRIXIE ON YOUR VPS 
+#### INSTALL Debian TRIXIE ON YOUR VPS 
 + from the VPS controle pannel,
 
   and when allowed, pre-install your SSH public key -the last line in your terminal- via the (Web) Controle Pannel.
@@ -121,32 +204,14 @@ BE AWARE: this entire page is being edited and the last bit still missing is :
   (if you don't find where to install Debian Trixie read your email from the provider and/or login to your online account)
 
 
-## Once your vps is running, let us copy in the script that will install wireguard server: 
+#### Once your vps is running, let us copy in the script that will install wireguard server: 
 
-### Windows users, copy-paste into your Powershell terminal: 
-```
-$key = Get-ChildItem "$HOME\.ssh\vps4wireguard-*" -File |
-    Where-Object { $_.Name -notlike "*.pub" } |
-    Sort-Object LastWriteTime -Descending |
-    Select-Object -First 1 -ExpandProperty FullName
-
-scp -i $key -P 22 "$HOME\scripts\install_vpn_ON_vps.sh" "root@vpsIP:/root/"
-
-```
-
-### macOs users, copy-paste into your terminal:
-```
-scp -i "$HOME"/.ssh/vps4wireguard-*[!.pub] \
-  -P 22 "$HOME/scripts/install_vpn_ON_vps.sh" \
-  root@vpsIP:/root/
-```
-
-### Linux users, copy paste into your terminal:
+#### copy-paste into your terminal:
 ```
 scp -i /root/.ssh/vps4wireguard*[!.pub] -P 22 /root/scripts/install_vpn_ON_vps.sh root@vpsIP:/root/
 ```
 
-## NOW for EveryOne: log-into the VPS 
+#### log-into the VPS 
 whatever way is yours:
 * if you have been able to preset your ssh public key, you probably know how to log in
 * if you have not been able to preset your ssh public key, you certainly have to login with your preset (or emailed) root password
@@ -163,22 +228,48 @@ exit
 exit
 ```
 
-### Windows users, copy-paste into your Powershell terminal: 
+#### copy paste into your terminal:
 ```
-$key = Get-ChildItem "$HOME\.ssh\vps4wireguard-*" -File |
-    Where-Object { $_.Name -notlike "*.pub" } |
-    Sort-Object LastWriteTime -Descending |
-    Select-Object -First 1 -ExpandProperty FullName
-
-scp -i $key -P 61525 "vpnadmin@vpsIP:/home/vpnadmin/*.age" "$HOME\Desktop\" 
-
+mkdir -p /home/$USER/WGclients
+scp -i /root/.ssh/vps4wireguard*[!.pub] -P 61525 vpnadmin@vpsIP:/home/vpnadmin/*.age /home/$USER/Downloads/WGclients/ 
+bash /root/scripts/local4linux_age-decyptWGclients.sh
 ```
+#### open any /home/$USER/WGclients/clientXXX.png file, 
+#### scan the QR code from your mobile's wireguard's app QR scanner, 
+#### namely: 
 
-### macOs users, copy-paste into your terminal:
+* (google) Play Store : https://play.google.com/store/apps/details?id=com.wireguard.android&hl=en-US
+
+* Apple Store : https://apps.apple.com/us/app/wireguard/id1441195209
+
+* (no longer on F-droid because wireguard updates themselves from within their VPN tunnel and F-droid can't verify updates).
+#
+
+
+BE AWARE: this entire page is being edited and the last bit still missing is :
++ add your VPS public IP in the script where there is a place holder awaiting (the ssh connection code for instance)
++ add your SSh .pub key (above) to the ssh placeholder on the head of install_vpn_ON_vps.sh
++ add your age .pub key (above) to the age public key place holder of install_vpn_ON_vps.sh
++ plan any passphase, soon will they be prompted.
+
+
+
+
+## NOW for EveryOne: log-into the VPS 
+whatever way is yours:
+* if you have been able to preset your ssh public key, you probably know how to log in
+* if you have not been able to preset your ssh public key, you certainly have to login with your preset (or emailed) root password
+
+and run the script we just copied-in on the previous step:
+1) You will be prompted for the letter y on loosing (you won't) your ssh connection
+2) on the public IP address of your VPS (from your emails)
+3) on a non-root new user passphrase of your choice (to remember because next time you log-in, you'll be loging in non-root mode)
+4) when two lines have enabled and you face a freez, count 5 seconds and press Ctrl+C,
+   (that's normal and is due to the network), 
+5) at what stage you can quit the ssh connection with :
 ```
-scp -i "$HOME"/.ssh/vps4wireguard-*[!.pub] \
-  -P 61525  vpnadmin@vpsIP:/home/vpnadmin/*.age \
-  "$HOME/Desktop/" 
+exit 
+exit
 ```
 
 ### Linux users, copy paste into your terminal:
