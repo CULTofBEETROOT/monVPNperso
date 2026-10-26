@@ -7,11 +7,6 @@ toutes les étapes de 0 connaissances à 100% installé wireguard vpn, running, 
   </tr>
 </table>
 
-<div>
-  <a href="LISEZ-MOI.md">🇫🇷</a>
-  <a href="README.md">🇺🇸</a>
-  <a href="DEUTSCH.md">🇩🇪</a>
-</div>
 
 #
 <table>
