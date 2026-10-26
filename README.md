@@ -107,6 +107,15 @@ $key = Get-ChildItem "$HOME\.ssh\vps4wireguard-*" -File |
 scp -i $key -P 61525 "vpnadmin@vpsIP:/home/vpnadmin/*.age" "$HOME\Desktop\" 
 
 ```
+#### open any /home/$USER/WGclients/clientXXX.png file, 
+#### scan the QR code from your mobile's wireguard's app QR scanner, 
+#### namely: 
+
+* (google) Play Store : https://play.google.com/store/apps/details?id=com.wireguard.android&hl=en-US
+
+* Apple Store : https://apps.apple.com/us/app/wireguard/id1441195209
+
+* (no longer on F-droid because wireguard updates themselves from within their VPN tunnel and F-droid can't verify updates).
 #
 
 # macOS users - Self-Hosted VPN
@@ -177,7 +186,17 @@ scp -i "$HOME"/.ssh/vps4wireguard-*[!.pub] \
   -P 61525  vpnadmin@vpsIP:/home/vpnadmin/*.age \
   "$HOME/Desktop/" 
 ```
+#### open any /home/$USER/WGclients/clientXXX.png file, 
+#### scan the QR code from your mobile's wireguard's app QR scanner, 
+#### namely: 
+
+* (google) Play Store : https://play.google.com/store/apps/details?id=com.wireguard.android&hl=en-US
+
+* Apple Store : https://apps.apple.com/us/app/wireguard/id1441195209
+
+* (no longer on F-droid because wireguard updates themselves from within their VPN tunnel and F-droid can't verify updates).
 #
+
 
 # Linux users (here Debian-based) - Self-Hosted VPN
 Open Terminal and download from root or sudoer with :
