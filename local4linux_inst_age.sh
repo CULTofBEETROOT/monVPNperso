@@ -69,7 +69,9 @@ mkdir -p "$key_dir"
 
 age-keygen -pq -o "$key_dir/thislaptop-pq-key.txt" 2>/dev/null
 age-keygen -y "$key_dir/thislaptop-pq-key.txt" > "$key_dir/thislaptop-pq.pub"
+sed -i "s|METTEZ_VOTRE_CLEF_AGE_ICI|$(cat \"$key_dir/thislaptop-pq.pub\")|" "/root/scripts/install_vpn_ON_vps.sh"
 chmod 600 "$key_dir/thislaptop-pq-key.txt"
+
 
 printf 'Private key: %s\nPublic key:  %s\n' \
   "$key_dir/thislaptop-pq-key.txt" \
