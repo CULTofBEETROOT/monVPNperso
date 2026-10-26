@@ -30,6 +30,7 @@ BE AWARE: this entire page is being edited and the last bit still missing is :
 + add your VPS public IP in the script where there is a place holder awaiting (the ssh connection code for instance)
 + add your SSh .pub key (above) to the ssh placeholder on the head of install_vpn_ON_vps.sh
 + add your age .pub key (above) to the age public key place holder of install_vpn_ON_vps.sh
++ plan any passphase, soon will they be prompted.
 
 
 # Windows users - Self-Hosted VPN
@@ -278,7 +279,7 @@ bash /root/scripts/local4linux_age-decyptWGclients.sh
 ### Your mobile Phone's browsing and Data now stream from your VPS location.
 #
 
-+ plan any passphase, soon will they be prompted.
+
 
 
 
