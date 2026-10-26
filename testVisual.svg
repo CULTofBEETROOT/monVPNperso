@@ -13,7 +13,7 @@
   <text x="600" y="140" text-anchor="middle"
         font-family="Arial, sans-serif" font-size="76" font-weight="bold"
         fill="#ff00cc" filter="url(#glow)">
-    TitleExtravagant.com
+    mon VPN perso
     <animate attributeName="fill"
              values="#ff00cc;#00eaff;#b6ff00;#ff9900;#ff00cc"
              dur="5s" repeatCount="indefinite"/>
