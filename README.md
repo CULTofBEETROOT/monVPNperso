@@ -26,7 +26,7 @@ optional : your 100 most impatient friends with their mobile phones devices, in 
 #
 
 
-## Windows users
+# Windows users
 
 Open PowerShell or Windows Terminal and install with WinGet:
 ```
@@ -107,10 +107,9 @@ $key = Get-ChildItem "$HOME\.ssh\vps4wireguard-*" -File |
 scp -i $key -P 61525 "vpnadmin@vpsIP:/home/vpnadmin/*.age" "$HOME\Desktop\" 
 
 ```
-
 #
 
-## macOS users
+# macOS users
 
 Open Terminal and install with Homebrew:
 ```
@@ -180,7 +179,7 @@ scp -i "$HOME"/.ssh/vps4wireguard-*[!.pub] \
 ```
 #
 
-## Linux users (here Debian-based)
+# Linux users (here Debian-based)
 Open Terminal and download from root or sudoer with :
 ```
 sudo mkdir -p /root/scripts/
