@@ -1,6 +1,11 @@
 # monVPNperso
 toutes les étapes de 0 connaissances à 100% installé wireguard vpn, running, abordable, ...
 
+<table>
+  <tr>
+     <td><a href="README.md">🇺🇸</a></td>
+  </tr>
+</table>
 
 #
 <table>
