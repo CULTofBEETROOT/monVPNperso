@@ -1,5 +1,5 @@
 # mon VPN perso
-toutes les étapes de 0 connaissances à 100% installé wireguard vpn, running, abordable, ...
+toutes les étapes de 0-connaissance à un vpn 100%-installé,-activé,-abordable, ...
 
 <table border="0">
   <tr>
