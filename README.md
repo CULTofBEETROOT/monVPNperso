@@ -24,16 +24,18 @@ all steps from 0 knowledge to 100% installed wireguard vpn, running, affordable,
 
 optional : your 100 most impatient friends with their mobile phones devices, in suspense watching you.
 
-#
-#
+<table border="0">
+  <tr>
 BE AWARE: this entire page is being edited and the last bit still missing is :
 + add your VPS public IP in the script where there is a place holder awaiting (the ssh connection code for instance)
 + add your SSh .pub key (above) to the ssh placeholder on the head of install_vpn_ON_vps.sh
 + add your age .pub key (above) to the age public key place holder of install_vpn_ON_vps.sh
 + plan any passphase, soon will they be prompted.
-#
-#
+  </tr>
+</table>
 
+#
+#
 # Windows users - Self-Hosted VPN
 
 Open PowerShell or Windows Terminal and install with WinGet:
@@ -127,8 +129,9 @@ scp -i $key -P 61525 "vpnadmin@vpsIP:/home/vpnadmin/*.age" "$HOME\Desktop\"
 
 ## CONGRATULITION! 
 ### Your mobile Phone's browsing and Data now stream from your VPS location.
-#
 
+#
+#
 # macOS users - Self-Hosted VPN
 
 Open Terminal and install with Homebrew:
@@ -209,9 +212,9 @@ scp -i "$HOME"/.ssh/vps4wireguard-*[!.pub] \
 
 ## CONGRATULITION! 
 ### Your mobile Phone's browsing and Data now stream from your VPS location.
+
 #
-
-
+#
 # Linux users (here Debian-based) - Self-Hosted VPN
 Open Terminal and download from root or sudoer with :
 ```
