@@ -116,6 +116,9 @@ scp -i $key -P 61525 "vpnadmin@vpsIP:/home/vpnadmin/*.age" "$HOME\Desktop\"
 * Apple Store : https://apps.apple.com/us/app/wireguard/id1441195209
 
 * (no longer on F-droid because wireguard updates themselves from within their VPN tunnel and F-droid can't verify updates).
+
+## CONGRATULITION! 
+### Your mobile Phone's browsing and Data now stream from your VPS location.
 #
 
 # macOS users - Self-Hosted VPN
@@ -195,6 +198,9 @@ scp -i "$HOME"/.ssh/vps4wireguard-*[!.pub] \
 * Apple Store : https://apps.apple.com/us/app/wireguard/id1441195209
 
 * (no longer on F-droid because wireguard updates themselves from within their VPN tunnel and F-droid can't verify updates).
+
+## CONGRATULITION! 
+### Your mobile Phone's browsing and Data now stream from your VPS location.
 #
 
 
@@ -261,6 +267,9 @@ bash /root/scripts/local4linux_age-decyptWGclients.sh
 * Apple Store : https://apps.apple.com/us/app/wireguard/id1441195209
 
 * (no longer on F-droid because wireguard updates themselves from within their VPN tunnel and F-droid can't verify updates).
+
+## CONGRATULITION! 
+### Your mobile Phone's browsing and Data now stream from your VPS location.
 #
 
 
@@ -272,5 +281,4 @@ BE AWARE: this entire page is being edited and the last bit still missing is :
 + plan any passphase, soon will they be prompted.
 
 
-## CONGRATULITION! 
-### Your mobile Phone's browsing and Data now stream from your VPS location.
+
