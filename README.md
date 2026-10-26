@@ -3,6 +3,9 @@ all steps from 0 knowledge to 100% installed wireguard vpn, running, affordable,
 
 
 #
+
+![Play store App image](images/wireguard_Play.jpg)
+
 ## REQUIREMENTS: 
 1 PC or 1 laptop, running either 
 * Linux, or 
