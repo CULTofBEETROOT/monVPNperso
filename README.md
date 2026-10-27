@@ -29,7 +29,6 @@ optional : your 100 most impatient friends with their mobile phones devices, in 
     <td>
 BE AWARE: this entire page is being edited and the last bit still missing is :
 <br> + add your VPS public IP in the script where there is a place holder awaiting (the ssh connection code for instance)
-<br> + add your SSh .pub key (above) to the ssh placeholder on the head of install_vpn_ON_vps.sh
 <br> + plan any passphase, soon will they be prompted.
     </td>
   </tr>
