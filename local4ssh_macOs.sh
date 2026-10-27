@@ -2,6 +2,8 @@
 set -euo pipefail
 
 key_dir="$HOME/.ssh"
+config="$key_dir/config"
+
 mkdir -p "$key_dir"
 chmod 700 "$key_dir"
 
@@ -16,7 +18,11 @@ ssh-keygen -q -t ed25519 -a 100 \
 eval "$(ssh-agent -s)"
 ssh-add "$key_path"
 
-cat >> "$key_dir/config" <<EOF
+pubkey="$(ssh-keygen -y -f "$key_path")"
+sed -i '' "s|METTEZ_VOTRE_CLEF_PUBLIQUE_ICI|$pubkey|g" "$key_dir/install_vpn_ON_vps.sh"
+
+touch "$config"
+cat >> "$config" <<EOF
 
 Host vps4wireguard
     HostName YourVPSip
@@ -26,6 +32,6 @@ Host vps4wireguard
     IdentitiesOnly yes
 EOF
 
-chmod 600 "$key_dir/config"
+chmod 600 "$config"
 
 printf 'Private key: %s\nPublic key:  %s.pub\n' "$key_path" "$key_path"
