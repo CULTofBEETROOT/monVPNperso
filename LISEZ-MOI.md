@@ -8,7 +8,7 @@ toutes les étapes de 0-connaissance à un vpn 100%-installé, -activé, -aborda
 </table>
 
 
-
+<br>
 <table>
   <tr>
     <td><img src="images/wireguard_Play.jpg" alt="WIREGUARD Project App on Play store" width="650"></td>
