@@ -20,7 +20,7 @@
 * Linux, or 
 * Windows, or 
 * MacOS (or derivative) ...
-1 VPS (eg. flokinet.is or 1984.is or netcup.de, 's most basic and affordable VPS offer)
+1 VPS (eg. flokinet.is or 1984.is or netcup.de).
 
 optional : your 100 most impatient friends with their mobile phones devices, in suspense watching you.
 
