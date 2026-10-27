@@ -30,7 +30,8 @@ $scriptText = $scriptText.Replace($placeholder, $pubKey)
     $scriptText,
     [System.Text.UTF8Encoding]::new($false)
 )
-
+$vpsEndpointFeeder = Read-Host "VPS public IP or DNS name"
+$scriptText = $scriptText.Replace("VPS_ENDPOINT", $vpsEndpointFeeder)
 $configPath = Join-Path $keyDir "config"
 $configEntry = @"
 
