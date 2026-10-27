@@ -10,12 +10,26 @@ $comment = "vps4wireguard-$stamp"
 ssh-keygen -q -t ed25519 -a 100 -f $keyPath -C $comment
 if ($LASTEXITCODE -ne 0) { throw "ssh-keygen failed." }
 
-# Start the Windows OpenSSH agent. Starting the service may require
-# opening PowerShell as Administrator if the service is disabled.
+# Start the Windows OpenSSH agent. Configuring or starting it may require
+# PowerShell to be run as Administrator.
 Set-Service ssh-agent -StartupType Manual
 Start-Service ssh-agent
 ssh-add $keyPath
 if ($LASTEXITCODE -ne 0) { throw "ssh-add failed." }
+
+$pubKey = & ssh-keygen -y -f $keyPath
+if ($LASTEXITCODE -ne 0) { throw "Could not derive the public key." }
+
+$installScript = Join-Path $keyDir "install_vpn_ON_vps.sh"
+$scriptText = [System.IO.File]::ReadAllText($installScript)
+$placeholder = "METTEZ_VOTRE_CLEF_PUBLIQUE_ICI"
+
+$scriptText = $scriptText.Replace($placeholder, $pubKey)
+[System.IO.File]::WriteAllText(
+    $installScript,
+    $scriptText,
+    [System.Text.UTF8Encoding]::new($false)
+)
 
 $configPath = Join-Path $keyDir "config"
 $configEntry = @"
