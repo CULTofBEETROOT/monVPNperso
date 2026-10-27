@@ -25,15 +25,7 @@
 
 optional : your 100 most impatient friends with their mobile phones devices, in suspense watching you.
 
-<table border="0">
-  <tr>
-    <td>
-BE AWARE: this entire page is being edited and the last bit still missing is :
-<br> + add your VPS public IP in the script where there is a place holder awaiting (the ssh connection code for instance)
-<br> + plan any passphase, soon will they be prompted.
-    </td>
-  </tr>
-</table>
+
 
 #
 #
@@ -54,6 +46,14 @@ https://github.com/CULTofBEETROOT/monVPNperso/local4windows_inst_age.ps1
 https://github.com/CULTofBEETROOT/monVPNperso/local4ssh_windows.ps1
 https://github.com/CULTofBEETROOT/monVPNperso/install_vpn_ON_vps.sh
 ```
+<table>
+  <tr>
+    <td>
+      <br> + fill your VPS IP in place of the YourVPSip in your OS'file local4ssh_ 
+    </td>
+  </tr>
+</table>
+
 try to run this file :
 ```
 cd "$HOME\Desktop"
@@ -150,6 +150,14 @@ https://github.com/CULTofBEETROOT/monVPNperso/local4macOs_inst_age.sh
 https://github.com/CULTofBEETROOT/monVPNperso/local4ssh_macOs.sh
 https://github.com/CULTofBEETROOT/monVPNperso/install_vpn_ON_vps.sh
 ```
+<table>
+  <tr>
+    <td>
+      <br> + fill your VPS IP in place of the YourVPSip in your OS'file local4ssh_ 
+    </td>
+  </tr>
+</table>
+
 then run the script:
 ```
 cd ~/Desktop
