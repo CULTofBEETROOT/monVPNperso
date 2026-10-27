@@ -181,7 +181,7 @@ scp -i "$HOME"/.ssh/vps4wireguard-*[!.pub] \
   "$HOME/Desktop/" 
 ```
 
-### Utilisateurs Linux, copiez la pâte dans votre terminal:
+### Utilisateurs Linux, copier-coller dans votre terminal:
 ```
 mkdir -p /home/$USER/WGclients
 scp -i /root/.ssh/vps4wireguard*[!.pub] -P 61525 vpnadmin@vpsIP:/home/vpnadmin/*.age /home/$USER/Downloads/WGclients/ 
