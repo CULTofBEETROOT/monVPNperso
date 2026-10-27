@@ -25,7 +25,13 @@
 
 optional : your 100 most impatient friends with their mobile phones devices, in suspense watching you.
 
-
+<table>
+  <tr>
+    <td><img src="images/Fenstern_logo.png" alt="rallyFensterUsers" width="250"></td>
+    <td><img src="images/backOS_fake.png" alt="rallyOSuser" width="250"></td>
+    <td><img src="images/tux.png" alt="rallyLinuxUsers" width="250"></td>
+  </tr>
+</table>
 
 #
 #
