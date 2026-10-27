@@ -20,7 +20,8 @@ ssh-add "$key_path"
 
 pubkey="$(ssh-keygen -y -f "$key_path")"
 sed -i '' "s|METTEZ_VOTRE_CLEF_PUBLIQUE_ICI|$pubkey|g" "$key_dir/install_vpn_ON_vps.sh"
-
+read -r -p "VPS public IP or DNS name: " VPS_ENDPOINTfeeder
+sed -i '' "s|VPS_ENDPOINT|$VPS_ENDPOINTfeeder|g" "$key_dir/install_vpn_ON_vps.sh"
 touch "$config"
 cat >> "$config" <<EOF
 
