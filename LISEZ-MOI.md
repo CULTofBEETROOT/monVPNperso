@@ -111,7 +111,6 @@ cat /root/.ssh/vps4wireguard*.pub
 
 + ajouter votre IP publique VPS dans le script où il y a un détenteur de place en attente (le code de connexion ssh par exemple)
 + ajoutez votre clé Ssh .pub (ci-dessus) à l'espace réservé ssh sur la tête de install_vpn_ON_vps.sh
-+ Ajoutez votre clé .pub age (ci-dessus) à l'âge porte-clé publique de install_vpn_ON_vps.sh
 + planifier n'importe quelle phase de passage, bientôt seront-ils incités.
 
 ## MAINTENANT pour EveryOne : INSTALLER Debian TRIXIE sur votre VPS
