@@ -29,9 +29,9 @@ optional : your 100 most impatient friends with their mobile phones devices, in 
 
 <table align="center">
   <tr>
-    <td><a href="fenstREADME.md"><img src="images/Fenstern_logo.png" alt="rallyFensterUsers" width="250"></a></td>
-    <td><a href="bascREADME.md"><img src="images/backOS_fake.png" alt="rallyOSuser" width="250"></a></td>
     <td><a href="linuxREADME.md"><img src="images/tux.png" alt="rallyLinuxUsers" width="250"></a></td>
+    <td><a href="bascREADME.md"><img src="images/backOS_fake.png" alt="rallyOSuser" width="250"></a></td>
+    <td><a href="fenstREADME.md"><img src="images/Fenstern_logo.png" alt="rallyFensterUsers" width="250"></a></td>
   </tr>
 </table>
 
