@@ -1,13 +1,13 @@
 # My Self-Hosted VPN
 #### all steps from 0 knowledge to 100% installed wireguard vpn, running, affordable, ...
 
-<table border="0">
+<table align="right">
   <tr>
      <td><a href="LISEZ-MOI.md">🇫🇷</a></td>
   </tr>
 </table>
 
-#
+
 <table>
   <tr>
     <td><img src="images/wireguard_Play.jpg" alt="WIREGUARD Project App on Play store" width="650"></td>
