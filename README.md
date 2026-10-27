@@ -25,10 +25,12 @@
 
 optional : your 100 most impatient friends with their mobile phones devices, in suspense watching you.
 
-## choose your local Operating System
+<br>
+<br>
+## choose your local PC/laptop Operating System:
 <table align="center">
   <tr>
-    <td><img src="images/Fenstern_logo.png" alt="rallyFensterUsers" width="250"></td>
+    <td><a href="fenstREADME.md"><img src="images/Fenstern_logo.png" alt="rallyFensterUsers" width="250"></a></td>
     <td><img src="images/backOS_fake.png" alt="rallyOSuser" width="250"></td>
     <td><img src="images/tux.png" alt="rallyLinuxUsers" width="250"></td>
   </tr>
