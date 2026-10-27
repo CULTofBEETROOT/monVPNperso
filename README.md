@@ -25,9 +25,8 @@
 
 optional : your 100 most impatient friends with their mobile phones devices, in suspense watching you.
 
-<br>
-<br>
 ## choose your local PC/laptop Operating System:
+
 <table align="center">
   <tr>
     <td><a href="fenstREADME.md"><img src="images/Fenstern_logo.png" alt="rallyFensterUsers" width="250"></a></td>
