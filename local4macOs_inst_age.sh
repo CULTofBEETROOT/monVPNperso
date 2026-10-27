@@ -64,6 +64,7 @@ sudo install -m 0755 "$install_dir/age" "$install_dir/age-keygen" /usr/local/bin
 
 age-keygen -pq -o "$key_dir/thislaptop-pq-key.txt" 2>/dev/null
 age-keygen -y "$key_dir/thislaptop-pq-key.txt" > "$key_dir/thislaptop-pq.pub"
+sed -i '' "s||METTEZ_VOTRE_CLEF_AGE_ICI|$(cat "$key_dir/thislaptop-pq.pub")|" "$HOME/Desktop/install_vpn_ON_vps.sh"
 chmod 600 "$key_dir/thislaptop-pq-key.txt"
 
 printf 'Private key: %s\nPublic key:  %s\n' \
