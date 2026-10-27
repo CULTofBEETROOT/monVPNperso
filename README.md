@@ -46,14 +46,6 @@ https://github.com/CULTofBEETROOT/monVPNperso/local4windows_inst_age.ps1
 https://github.com/CULTofBEETROOT/monVPNperso/local4ssh_windows.ps1
 https://github.com/CULTofBEETROOT/monVPNperso/install_vpn_ON_vps.sh
 ```
-<table>
-  <tr>
-    <td>
-      <br> + fill your VPS IP in place of the YourVPSip in your OS'file local4ssh_ 
-    </td>
-  </tr>
-</table>
-
 try to run this file :
 ```
 cd "$HOME\Desktop"
@@ -150,14 +142,6 @@ https://github.com/CULTofBEETROOT/monVPNperso/local4macOs_inst_age.sh
 https://github.com/CULTofBEETROOT/monVPNperso/local4ssh_macOs.sh
 https://github.com/CULTofBEETROOT/monVPNperso/install_vpn_ON_vps.sh
 ```
-<table>
-  <tr>
-    <td>
-      <br> + fill your VPS IP in place of the YourVPSip in your OS'file local4ssh_ 
-    </td>
-  </tr>
-</table>
-
 then run the script:
 ```
 cd ~/Desktop
