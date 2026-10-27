@@ -1,5 +1,4 @@
-#
-#
+
 # Windows users - Self-Hosted VPN
 
 Open PowerShell or Windows Terminal and install with WinGet:
